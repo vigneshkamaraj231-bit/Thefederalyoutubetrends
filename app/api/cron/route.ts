@@ -1,6 +1,6 @@
 import { NextRequest } from 'next/server'
-import { collectSnapshot } from '@/lib/trends'
-import { saveSnapshot } from '@/lib/store'
+import { collectSnapshot } from '../../../lib/trends'
+import { saveSnapshot } from '../../../lib/store'
 
 export const dynamic = 'force-dynamic'
 export const maxDuration = 60
