@@ -11,10 +11,10 @@ export async function GET(request: NextRequest) {
     const q = searchParams.get('q')
     const history = searchParams.get('history') === 'true'
 
-    if (history) return Response.json({ data: await getHistory(Number(searchParams.get('hours') || 24)) })
+    if (history) return Response.json({ data: await getHistory(Number(searchParams.get('hours') || 24), region) })
     if (q) return Response.json({ data: await searchVideos(q, region) })
 
-    const cached = await getLatest()
+    const cached = await getLatest(region)
     if (cached.length) return Response.json({ data: cached, source: 'snapshot' })
     return Response.json({ data: await getTrendingVideos(region), source: 'youtube' })
   } catch (error) {
