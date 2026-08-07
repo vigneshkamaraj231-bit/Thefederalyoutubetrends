@@ -1,6 +1,6 @@
 import { NextRequest } from 'next/server'
-import { getLatest, getHistory } from '@/lib/store'
-import { getTrendingVideos, searchVideos } from '@/lib/youtube'
+import { getLatest, getHistory } from '../../../lib/store'
+import { getTrendingVideos, searchVideos } from '../../../lib/youtube'
 
 export const dynamic = 'force-dynamic'
 
