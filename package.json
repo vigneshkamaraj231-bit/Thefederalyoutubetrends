@@ -1,18 +1,16 @@
 {
   "name": "thefederal-youtube-trends",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
-  "engines": {
-    "node": ">=24"
-  },
+  "engines": { "node": ">=20.19" },
   "dependencies": {
-    "@vercel/config": "latest",
+    "@neondatabase/serverless": "latest",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"
@@ -21,6 +19,8 @@
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
     "typescript": "latest"
   }
 }
